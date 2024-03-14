@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lab 2</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container mt-4">
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button
+            class="nav-link active"
+            id="nav-home-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#nav-home"
+            type="button"
+            role="tab"
+            aria-controls="nav-home"
+            aria-selected="true"
+          >
+            cap nhat
+          </button>
+          <button
+            class="nav-link"
+            id="nav-profile-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#nav-profile"
+            type="button"
+            role="tab"
+            aria-controls="nav-profile"
+            aria-selected="false"
+          >
+            danh sach
+          </button>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="nav-home"
+          role="tabpanel"
+          aria-labelledby="nav-home-tab"
+          tabindex="0"
+        >
+          <div class="container text-center mt-3">
+            <div class="card-header bg-secondary text-light p-4">
+              danh sach sinh vieen
+            </div>
+            <table class="table table-bordered">
+              <tr class="text-center">
+                <th rowspan="2">ma</th>
+                <th rowspan="2">ho ten</th>
+                <th colspan="3">luong</th>
+              </tr>
+              <tr>
+                <th>luong</th>
+                <th>thuong</th>
+                <th>phu cap</th>
+              </tr>
+              <tr>
+                <td>nhan vien 1</td>
+                <td>nguyen van a</td>
+                <td>150000 vnd</td>
+                <td>20000 vnd</td>
+                <td>400000 vnd</td>
+              </tr>
+              <tr>
+                <td>nhan vien 2</td>
+                <td>nguyen van a</td>
+                <td>150000 vnd</td>
+                <td>20000 vnd</td>
+                <td>400000 vnd</td>
+              </tr>
+              <tr>
+                <td>nhan vien 3</td>
+                <td>nguyen van a</td>
+                <td>150000 vnd</td>
+                <td>20000 vnd</td>
+                <td>400000 vnd</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="nav-profile"
+          role="tabpanel"
+          aria-labelledby="nav-profile-tab"
+          tabindex="0"
+        >
+          <div class="container mt-3">
+            <form class="border p-3">
+              <div class="row">
+                <div class="mb-3 col-md-6">
+                  <div class="mb-3">
+                    <label for="mnv" class="form-label">ma nhan vien</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="mnv"
+                      placeholder="ma nhan vien"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="luachon" class="form-label">cau lac bo</label>
+                    <select class="form-select" id="luachon">
+                      <option>ha noi</option>
+                      <option>da nang</option>
+                      <option>ho chi minh</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="thuong" class="form-label">thuong</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="thuong"
+                      placeholder="ma nhan vien"
+                    />
+                  </div>
+                </div>
+                <div class="mb-3 col-md-6">
+                  <div class="mb-3">
+                    <label for="1" class="form-label">ho va ten</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="1"
+                      placeholder="ho va ten"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="luong" class="form-label">luong</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="luong"
+                      placeholder="luong"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="phucap" class="form-label">phu cap</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="phucap"
+                      placeholder="phu cap"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="ghichu mb-3">
+                <label for="comment">ghi chu:</label>
+                <textarea
+                  class="form-control"
+                  rows="5"
+                  id="comment"
+                  name="text"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
