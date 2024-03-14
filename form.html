@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angular</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  </head>
+  <body ng-app="myApp">
+    <div ng-controller="myCtrl">
+      <input ng-model="var1" type="number" min="0" />
+      <br />
+      <br />
+      <input ng-model="var2" type="number" min="0" />
+      <h3>tổng = <span ng-if="sum">{{sum}}</span></h3>
+    </div>
+    <script>
+      angular.module("myApp", []).controller("myCtrl", function ($scope) {
+        $scope.var1 = null;
+        $scope.var2 = null;
+
+        $scope.$watchGroup(["var1", "var2"], function (newValues) {
+          $scope.sum = parseInt(newValues[0]) + parseInt(newValues[1]);
+        });
+      });
+    </script>
+  </body>
+</html>

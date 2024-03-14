@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angular</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  </head>
+  <body ng-app="myApp">
+    <!-- ng-app: phạm vi ứng dụng angular js -->
+    <div ng-controller="myCtrl">
+      <!-- ng-controller: định nghĩa phạm vi giao diện được điều khiển bởi controller -->
+      <!-- trong 1 ứng dụng có thể nhiều controller -->
+      <h3>{{infor.fpoly}}</h3>
+      <h3>{{infor.course}}</h3>
+      <hr />
+      <h3>{{thongtin.ten}}</h3>
+      <h3>{{thongtin.sdt}}</h3>
+      <h3>{{thongtin.diachi}}</h3>
+      <h3>{{thongtin.sothich}}</h3>
+      <h3>{{thongtin.tinhtrang}}</h3>
+      <h3><imgs src="{{thongtin.image}}" alt="" /></h3>
+      <hr />
+      <h3>xin chào {{mang[0]}}, {{mang[1]}} tuoi!</h3>
+    </div>
+
+    <script>
+      function myFunc($scope) {
+        $scope.infor = {
+          fpoly: "FPT POLYTECHNIC",
+          course: "Angular js",
+        };
+        $scope.thongtin = {
+          ten: "Liem",
+          sdt: "0376278382",
+          diachi: "Thái Bình",
+          sothich: "xem siu nhân",
+          tinhtrang: "đã có ny",
+          image:
+            "https://tse1.mm.bing.net/th?id=OIP.avb9nDfw3kq7NOoP0grM4wHaEK&pid=Api&rs=1&c=1&qlt=95&w=172&h=97",
+        };
+        $scope.mang = ["Ngô TRọng Liêm", 19];
+      }
+      var app = angular.module("myApp", []); // tạo module ứng dụng angular
+      app.controller("myCtrl", myFunc); // định nghĩa hàm myFunc xử lí giao diện 'controller' myCtrl
+      app.controller("myCtrl1", myFunc); // định nghĩa hàm myFunc xử lí giao diện 'controller' myCtrl1
+    </script>
+  </body>
+</html>

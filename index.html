@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angular</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  </head>
+  <body ng-app="myApp">
+    <!-- ng-app: phạm vi ứng dụng angular js -->
+    <div ng-controller="myCtrl">
+      <!-- ng-controller: định nghĩa phạm vi giao diện được điều khiển bởi controller -->
+      <!-- trong 1 ứng dụng có thể nhiều controller -->
+      <h1>{{welcome}}</h1>
+    </div>
+    <div ng-controller="myCtrl1">
+      <h1>{{hello}}</h1>
+      <h1>{{var1}} + {{var2}} = {{var1 + var2}}</h1>
+      <h1>Hello {{name}}, {{age}} tuổi, đến từ {{address}}</h1>
+    </div>
+    <script>
+      function myFunc($scope) {
+        $scope.welcome = "Xin chào, Angular Js";
+        $scope.hello = "Xin chào, Angular Js phần 2";
+        $scope.var1 = 1;
+        $scope.var2 = 2;
+        $scope.name = "Ngô Trọng Liêm";
+        $scope.age = 19;
+        $scope.address = "Thái Bình";
+      }
+      var app = angular.module("myApp", []); // tạo module ứng dụng angular
+      app.controller("myCtrl", myFunc); // định nghĩa hàm myFunc xử lí giao diện 'controller' myCtrl
+      app.controller("myCtrl1", myFunc); // định nghĩa hàm myFunc xử lí giao diện 'controller' myCtrl1
+      //   angular.module("myApp", []).controller("myCtrl1", function($scope){
+      //     $scope.welcome = "xin chào mọi người"
+      //   }); // vieets tắt cách 2
+    </script>
+  </body>
+</html>
